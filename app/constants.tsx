@@ -20,3 +20,9 @@ export const loadingIndicator = (
 
    </div>
 );
+
+export const Locations = [
+    "Chennai",
+    "Bangalore",
+    "Hyderabad",
+  ];

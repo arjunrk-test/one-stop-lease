@@ -4,13 +4,14 @@ import { useAuth } from "@/components/AuthProvider";
 import { Button } from "@/components/ui/button";
 import ProfileDropdown from "@/components/ProfileDropdown"; // Adjust path accordingly
 import { useState } from "react";
+import { Locations } from "@/app/constants";
 
 export default function Navbar() {
   const { user } = useAuth();
   const [location, setLocation] = useState("Chennai"); // Replace with real location logic later
 
   return (
-    <nav className="w-full px-48 py-4 bg-gray-100 shadow-sm flex items-center justify-between">
+    <nav className="w-full px-48 py-4 bg-gray-200 shadow-sm flex items-center justify-between">
       {/* Logo */}
       <Link href="/" className="text-2xl font-bold text-highlight">
         OneStopLease
@@ -22,10 +23,11 @@ export default function Navbar() {
         onChange={(e) => setLocation(e.target.value)}
         className="border border-highlight px-3 py-1 rounded-md text-sm h-8 w-48"
       >
-        <option>Chennai</option>
-        <option>Bangalore</option>
-        <option>Hyderabad</option>
-        {/* Add more cities */}
+        {Locations.map((loc) => (
+          <option key={loc} value={loc}>
+            {loc}
+          </option>
+        ))}
       </select>
 
       {/* Search bar */}

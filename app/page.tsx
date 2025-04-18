@@ -1,15 +1,15 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import { signOut } from "firebase/auth";
-import { auth } from "@/firebase";
 import Link from "next/link";
 import { useAuth } from "@/components/AuthProvider";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   const { user } = useAuth();
 
   return (
     <main className="min-h-screen flex flex-col justify-between bg-gray-50">
+      <Navbar />
       <section className="w-full px-6 py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           {/* Left Text Content */}
@@ -24,14 +24,6 @@ export default function Home() {
               <Link href="/products">
                 <Button className="px-6 py-3 text-base">Explore Products</Button>
               </Link>
-
-              {user ? (
-                <Button onClick={() => signOut(auth)} className="px-6 py-3 text-base bg-highlight hover:bg-highlight/80">Sign Out</Button>
-              ) : (
-                <Link href="/login">
-                  <Button variant="default" className="px-6 py-3 text-base bg-highlight hover:bg-highlight/80">Login</Button>
-                </Link>
-              )}
             </div>
           </div>
 

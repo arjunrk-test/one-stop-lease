@@ -26,3 +26,22 @@ export const Locations = [
     "Bangalore",
     "Hyderabad",
   ];
+
+  import { CiHeart, CiSettings, CiViewList } from "react-icons/ci";
+  export const ProfileList = [
+    {
+      name: "My Account",
+      icon: <CiViewList className="text-highlight text-2xl"/>,
+      reference: "/account",
+    },
+    {
+      name: "Wishlist",
+      icon: <CiHeart className="text-highlight text-2xl"/>,
+      reference: "/whishlist",
+    },
+    {
+      name: "Settings",
+      icon: <CiSettings className="text-highlight text-2xl"/>,
+      reference: "/settings",
+    },
+  ];

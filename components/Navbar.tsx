@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import ProfileDropdown from "@/components/ProfileDropdown"; // Adjust path accordingly
 import { useState } from "react";
 import { Locations } from "@/app/constants";
+import { Input } from "./ui/input";
 
 export default function Navbar() {
   const { user } = useAuth();
@@ -31,10 +32,10 @@ export default function Navbar() {
       </select>
 
       {/* Search bar */}
-      <input
+      <Input
         type="text"
         placeholder="Search for furniture, appliances..."
-        className="border border-highlight px-4 py-2 rounded-md w-1/3 placeholder:text-sm text-sm"
+        className="border bg-white border-highlight px-4 py-2 rounded-md w-1/3 h-8 placeholder:text-sm text-sm"
       />
 
       {/* Auth Button / Profile */}
@@ -43,7 +44,7 @@ export default function Navbar() {
           <ProfileDropdown />
         ) : (
           <Link href="/login">
-            <Button variant="default" className="px-6 py-3 text-md bg-highlight hover:bg-highlight/80">Login</Button>
+            <Button variant="default" className="px-6 py-3 h-8 text-md bg-highlight hover:bg-highlight/80">Login</Button>
           </Link>
         )}
       </div>

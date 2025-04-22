@@ -49,6 +49,7 @@ function OtpLogin({ closeDialog }: Props) {
   const verifyOtp = async () => {
     startTransition(async () => {
       setError("");
+      setSuccess("");
       if (!confirmationResult) {
         setError("Please request OTP first.");
         return;
@@ -60,6 +61,7 @@ function OtpLogin({ closeDialog }: Props) {
       } catch (error) {
         console.log(error);
         setError("Failed to verify OTP. Please check the OTP.");
+        setSuccess("");
       }
     });
   };

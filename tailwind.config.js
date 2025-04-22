@@ -28,9 +28,8 @@ module.exports = {
       colors: {
         primary: "#181818",
         secondary: "#f2f2f2",
-        highlight: "#DC2626",
-        accent: "#CB4232",
-        accentSec: "#E14232",
+        highlight: "#3BBA9C",
+        accent: "#384E59",
       },
       keyframes: {
         "accordion-down": {

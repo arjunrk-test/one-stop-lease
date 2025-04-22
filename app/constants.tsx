@@ -45,3 +45,19 @@ export const Locations = [
       reference: "/settings",
     },
   ];
+
+
+  import { RiEBikeLine } from "react-icons/ri";
+  import { IoBedOutline } from "react-icons/io5";
+  import { LuWashingMachine } from "react-icons/lu";
+  import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
+  import { CiDumbbell } from "react-icons/ci";
+  import { PiBabyCarriageLight } from "react-icons/pi";
+  export const Categories = [
+    {category: "furniture", name: "Furniture", icon: <IoBedOutline className="text-highlight text-2xl"/>},
+    {category: "appliances", name: "Appliances", icon: <LuWashingMachine className="text-highlight text-2xl" />},
+    {category: "electronics", name: "Electronics", icon: <HiOutlineDevicePhoneMobile className="text-highlight text-2xl" />},
+    {category: "vehicles", name: "Vehicles", icon: <RiEBikeLine className="text-highlight text-2xl" />},
+    {category: "fitness", name: "Fitness", icon: <CiDumbbell className="text-highlight text-2xl" />},
+    {category: "baby-products", name: "Baby", icon: <PiBabyCarriageLight className="text-highlight text-2xl" />},
+  ];

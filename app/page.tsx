@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useAuth } from "@/components/AuthProvider";
 import Navbar from "@/components/Navbar";
+import { Categories } from "./constants";
 
 export default function Home() {
   const { user } = useAuth();
@@ -18,7 +19,7 @@ export default function Home() {
               Rent Smarter with <span className="text-highlight">OneStopLease</span>
             </h1>
             <p className="mt-6 text-md text-gray-700">
-              Affordable rentals for furniture, appliances, and electronics all in one place. Experience fast delivery, easy returns, and hassle-free service.
+              Affordable rentals for furniture, appliances, electronics and many more. All in one place, experience fast delivery, easy returns, and hassle-free service.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/products">
@@ -37,6 +38,24 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Category Section */}
+      <section className="w-full px-6 py-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Categories</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {Categories.map((category) => (
+              <Link key={category.name} href={`/products/${category.category}`}>
+                <div className="bg-white p-4 rounded-xl shadow hover:shadow-xl hover:shadow-highlight transition-all cursor-pointer flex flex-col items-center justify-center">
+                  {category.icon}
+                  <p className="text-xs p-2 font-medium text-gray-700">{category.name}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Footer */}
       <footer className="bg-gray-200 text-center py-2 text-sm text-primary mt-auto">

@@ -46,11 +46,13 @@ export default function Home() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {Categories.map((category) => (
               <Link key={category.name} href={`/products/${category.category}`}>
-                <div className="bg-white p-4 rounded-xl shadow hover:shadow-xl hover:shadow-highlight transition-all cursor-pointer flex flex-col items-center justify-center">
+              <div className="bg-white p-4 rounded-xl shadow hover:shadow-xl hover:shadow-accent transition-all cursor-pointer flex flex-col items-center justify-center group">
+                <div className="text-2xl text-highlight group-hover:text-accent transition-colors">
                   {category.icon}
-                  <p className="text-xs p-2 font-medium text-gray-700">{category.name}</p>
                 </div>
-              </Link>
+                <p className="text-xs p-2 font-medium text-gray-700">{category.name}</p>
+              </div>
+            </Link>            
             ))}
           </div>
         </div>

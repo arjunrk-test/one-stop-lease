@@ -29,7 +29,7 @@ module.exports = {
         primary: "#181818",
         secondary: "#f2f2f2",
         highlight: "#3BBA9C",
-        accent: "#384E59",
+        accent: "#EDAD2D",
       },
       keyframes: {
         "accordion-down": {

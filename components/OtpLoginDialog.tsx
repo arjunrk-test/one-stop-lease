@@ -30,7 +30,7 @@ export default function OtpLoginDialog() {
                <div className="w-full md:w-1/2 bg-highlight text-white p-4 flex flex-col justify-center">
                   <div className=" flex items-center justify-center">
                      <img
-                        src="/furn.jpg"
+                        src="/login.svg"
                         alt="Login Illustration"
                         className="w-full h-auto m-2 object-contain"
                      />

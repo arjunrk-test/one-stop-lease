@@ -30,9 +30,9 @@ export default function Home() {
           {/* Right Image */}
           <div className="flex-1">
             <img
-              src="/next.svg"
+              src="/hero.svg"
               alt="Rental service illustration"
-              className="w-full max-w-md mx-auto"
+              className="w-full max-w-md mx-auto "
             />
           </div>
         </div>

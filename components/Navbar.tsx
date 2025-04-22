@@ -6,6 +6,8 @@ import ProfileDropdown from "@/components/ProfileDropdown"; // Adjust path accor
 import { useState } from "react";
 import { Locations } from "@/app/constants";
 import { Input } from "./ui/input";
+import OtpLoginDialog from "./OtpLoginDialog";
+
 
 export default function Navbar() {
   const { user } = useAuth();
@@ -22,7 +24,7 @@ export default function Navbar() {
       <select
         value={location}
         onChange={(e) => setLocation(e.target.value)}
-        className="border border-highlight px-3 py-1 rounded-md text-sm h-8 w-48"
+        className="border border-highlight px-3 py-1 focus:ring-0 focus:outline-none focus-visible:ring-0 rounded-md text-sm h-8 w-48"
       >
         {Locations.map((loc) => (
           <option key={loc} value={loc}>
@@ -35,7 +37,7 @@ export default function Navbar() {
       <Input
         type="text"
         placeholder="Search for furniture, appliances..."
-        className="border bg-white border-highlight px-4 py-2 rounded-md w-1/3 h-8 placeholder:text-sm text-sm"
+        className="border bg-white border-highlight px-4 focus:ring-0 focus:outline-none focus-visible:ring-0 py-2 rounded-md w-1/3 h-8 placeholder:text-sm text-sm"
       />
 
       {/* Auth Button / Profile */}
@@ -43,9 +45,7 @@ export default function Navbar() {
         {user ? (
           <ProfileDropdown />
         ) : (
-          <Link href="/login">
-            <Button variant="default" className="px-6 py-3 h-8 text-md bg-highlight hover:bg-highlight/80">Login</Button>
-          </Link>
+          <OtpLoginDialog />
         )}
       </div>
     </nav>

@@ -15,7 +15,7 @@ export default function Home() {
           {/* Left Text Content */}
           <div className="flex-1">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-              Rent Smarter with <span className="text-indigo-600">OneStopLease</span>
+              Rent Smarter with <span className="text-highlight">OneStopLease</span>
             </h1>
             <p className="mt-6 text-md text-gray-700">
               Affordable rentals for furniture, appliances, and electronics all in one place. Experience fast delivery, easy returns, and hassle-free service.

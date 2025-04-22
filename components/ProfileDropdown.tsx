@@ -17,7 +17,7 @@ const ProfileDropdown = () => {
       {user ? (
         <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild>
-            <Button variant="default" className="flex items-center gap-2 bg-highlight h-8 text-white hover:bg-highlight/80">
+            <Button variant="default" className="flex items-center gap-2 focus:ring-0 focus:outline-none focus-visible:ring-0 bg-highlight h-8 text-white hover:bg-highlight/80">
               Profile <ChevronDown className="w-4 h-4" />
             </Button>
           </DropdownMenu.Trigger>
@@ -27,7 +27,7 @@ const ProfileDropdown = () => {
               <DropdownMenu.Item asChild key={item.name}>
                 <Link
                   href={item.reference}
-                  className="flex items-center gap-2 px-2 py-1 text-sm hover:bg-gray-200 rounded-md"
+                  className="flex items-center gap-2 focus:ring-0 focus:outline-none focus-visible:ring-0 px-2 py-1 text-sm hover:bg-gray-200 rounded-md"
                 >
                   {item.icon}
                   {item.name}

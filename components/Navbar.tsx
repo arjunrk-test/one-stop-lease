@@ -14,7 +14,7 @@ export default function Navbar() {
   const [location, setLocation] = useState("Chennai"); // Replace with real location logic later
 
   return (
-    <nav className="w-full px-48 py-4 bg-gray-200 shadow-sm flex items-center justify-between">
+    <nav className="w-full sticky top-0 px-48 py-4 bg-gray-200 shadow-sm flex items-center justify-between">
       {/* Logo */}
       <Link href="/" className="text-2xl font-bold text-highlight">
         OneStopLease

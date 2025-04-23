@@ -20,3 +20,44 @@ export const loadingIndicator = (
 
    </div>
 );
+
+export const Locations = [
+    "Chennai",
+    "Bangalore",
+    "Hyderabad",
+  ];
+
+  import { CiHeart, CiSettings, CiViewList } from "react-icons/ci";
+  export const ProfileList = [
+    {
+      name: "My Account",
+      icon: <CiViewList className="text-highlight text-2xl"/>,
+      reference: "/account",
+    },
+    {
+      name: "Wishlist",
+      icon: <CiHeart className="text-highlight text-2xl"/>,
+      reference: "/whishlist",
+    },
+    {
+      name: "Settings",
+      icon: <CiSettings className="text-highlight text-2xl"/>,
+      reference: "/settings",
+    },
+  ];
+
+
+  import { RiEBikeLine } from "react-icons/ri";
+  import { IoBedOutline } from "react-icons/io5";
+  import { LuWashingMachine } from "react-icons/lu";
+  import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
+  import { CiDumbbell } from "react-icons/ci";
+  import { PiBabyCarriageLight } from "react-icons/pi";
+  export const Categories = [
+    {category: "furniture", name: "Furniture", icon: <IoBedOutline />},
+    {category: "appliances", name: "Appliances", icon: <LuWashingMachine  />},
+    {category: "electronics", name: "Electronics", icon: <HiOutlineDevicePhoneMobile  />},
+    {category: "vehicles", name: "Vehicles", icon: <RiEBikeLine  />},
+    {category: "fitness", name: "Fitness", icon: <CiDumbbell  />},
+    {category: "baby-products", name: "Baby", icon: <PiBabyCarriageLight  />},
+  ];

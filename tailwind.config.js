@@ -1,7 +1,7 @@
-import { Config } from 'tailwindcss';
-import tailwindcssAnimate from 'tailwindcss-animate';
+const tailwindcssAnimate = require('tailwindcss-animate');
 
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ["class"],
   content: [
     './pages/**/*.{js,jsx,ts,tsx}',
@@ -28,8 +28,8 @@ const config: Config = {
       colors: {
         primary: "#181818",
         secondary: "#f2f2f2",
-        accent: "#CB4232",
-        accentSec: "#E14232",
+        highlight: "#3BBA9C",
+        accent: "#EDAD2D",
       },
       keyframes: {
         "accordion-down": {
@@ -49,5 +49,3 @@ const config: Config = {
   },
   plugins: [tailwindcssAnimate],
 };
-
-export default config;

@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
 import { useAuth } from "@/components/AuthProvider";
-import { Button } from "@/components/ui/button";
-import ProfileDropdown from "@/components/ProfileDropdown"; // Adjust path accordingly
+import ProfileDropdown from "@/components/ProfileDropdown"; 
 import { useState } from "react";
 import { Locations } from "@/app/constants";
 import { Input } from "./ui/input";
 import OtpLoginDialog from "./OtpLoginDialog";
+import ThemeToggle from "./ThemeToogle";
 
 
 export default function Navbar() {
@@ -39,6 +39,8 @@ export default function Navbar() {
         placeholder="Search for furniture, appliances..."
         className="border bg-white border-highlight px-4 focus:ring-0 focus:outline-none focus-visible:ring-0 py-2 rounded-md w-1/3 h-8 placeholder:text-sm text-sm"
       />
+
+      <ThemeToggle />
 
       {/* Auth Button / Profile */}
       <div>

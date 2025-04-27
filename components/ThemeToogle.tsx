@@ -10,11 +10,11 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="w-16 h-8 flex items-center rounded-full bg-gray-300 dark:bg-gray-700 p-1 relative"
+      className="w-16 h-8 flex items-center rounded-full bg-accent dark:bg-highlight p-1 relative"
     >
       {/* Sliding Circle */}
       <motion.div
-        className="w-6 h-6 bg-white dark:bg-black rounded-full flex items-center justify-center absolute"
+        className="w-6 h-6 bg-yellow-300 dark:bg-black/40 rounded-full flex items-center justify-center absolute"
         layout
         transition={{ type: "spring", stiffness: 700, damping: 30 }}
         style={{
@@ -22,9 +22,9 @@ export default function ThemeToggle() {
         }}
       >
         {theme === "light" ? (
-          <CiLight className="text-yellow-400" size={16} />
+          <CiLight className="text-black" size={20} />
         ) : (
-          <CiDark className="text-blue-400" size={16} />
+          <CiDark className="text-white" size={20} />
         )}
       </motion.div>
     </button>

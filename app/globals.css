@@ -7,6 +7,21 @@ body {
 }
   
 @layer base {
+
+  :root {
+    --background: white;
+    --foreground: #181818;
+    --gray: #E2E3E7; 
+    --highlight: #3BBA9C;
+  }
+  
+  .dark {
+    --background: #181818;
+    --foreground: white;
+    --gray: #2A2B30; 
+    --highlight: #3BBA9C;
+  }
+
   body {
     @apply font-primary bg-white text-black leading-loose;
   }

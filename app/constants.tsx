@@ -61,3 +61,8 @@ export const Locations = [
     {category: "fitness", name: "Fitness", icon: <CiDumbbell  />},
     {category: "baby-products", name: "Baby", icon: <PiBabyCarriageLight  />},
   ];
+
+  export const CategoriesPath = Categories.map((category) => ({
+    ...category,
+    pathName: `/products/${category.category}`,
+  }));

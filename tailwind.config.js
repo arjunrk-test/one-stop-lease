@@ -30,6 +30,7 @@ module.exports = {
         secondary: "#f2f2f2",
         highlight: "#3BBA9C",
         accent: "#EDAD2D",
+        tertiary: "#E5E7EB",
       },
       keyframes: {
         "accordion-down": {

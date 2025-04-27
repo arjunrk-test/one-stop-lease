@@ -8,7 +8,7 @@ export default function PagesNav() {
   const currentItem = CategoriesPath.find(category => pathname === category.pathName)?.name || 'Home';
 
   return (
-    <div className="bg-white py-4 px-48 shadow-md">
+    <div className="bg-background py-4 px-48 shadow-md">
       {/* Flex Container for Breadcrumbs and Menu Items */}
       <div className="flex justify-between items-center px-6">
         {/* Breadcrumbs (Aligned Left) */}
@@ -18,8 +18,8 @@ export default function PagesNav() {
             onClick={() => {
               window.location.href = '/';
             }}>Home&nbsp;</span> 
-          <span className='text-primary'>&gt;&nbsp;</span>  
-          <span className="text-primary text-xs">{currentItem}</span>
+          <span className='text-foreground'>&gt;&nbsp;</span>  
+          <span className="text-foreground text-xs">{currentItem}</span>
         </nav>
 
         {/* Menu Items (Aligned Right) */}
@@ -30,7 +30,7 @@ export default function PagesNav() {
               onClick={() => {
                 window.location.href = category.pathName;
               }}
-              className={`text-primary text-xs cursor-pointer ${category.name === currentItem ? 'underline decoration-highlight decoration-1 underline-offset-4' : ''}`}
+              className={`text-foreground text-xs cursor-pointer ${category.name === currentItem ? 'underline decoration-highlight decoration-1 underline-offset-4' : ''}`}
             >
               {category.name}
             </li>

@@ -42,7 +42,6 @@ export default function Home() {
       {/* Category Section */}
       <section className="w-full px-6 py-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Categories</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {Categories.map((category) => (
               <Link key={category.name} href={`/products/${category.category}`}>

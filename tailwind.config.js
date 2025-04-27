@@ -2,7 +2,7 @@ const tailwindcssAnimate = require('tailwindcss-animate');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,jsx,ts,tsx}',
     './components/**/*.{js,jsx,ts,tsx}',
@@ -30,6 +30,7 @@ module.exports = {
         secondary: "#f2f2f2",
         highlight: "#3BBA9C",
         accent: "#EDAD2D",
+        tertiary: "#E5E7EB",
       },
       keyframes: {
         "accordion-down": {

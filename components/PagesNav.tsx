@@ -8,7 +8,7 @@ export default function PagesNav() {
   const currentItem = CategoriesPath.find(category => pathname === category.pathName)?.name || 'Home';
 
   return (
-    <div className="bg-background py-4 px-48 shadow-md">
+    <div className="bg-background sticky top-[64px] z-20 py-4 px-48 shadow-md">
       {/* Flex Container for Breadcrumbs and Menu Items */}
       <div className="flex justify-between items-center px-6">
         {/* Breadcrumbs (Aligned Left) */}

@@ -22,7 +22,7 @@ export default function Fitness(){
                         Fitness equipments on Rent
                      </span>
                      <p className="text-sm text-muted">
-                        Upgrade your home hassle-free—rent top-notch appliances today!
+                        Level up your workouts—rent premium fitness gear today!
                      </p>
                   </div>
                </div>

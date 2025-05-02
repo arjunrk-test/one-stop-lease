@@ -13,6 +13,7 @@ body {
     --foreground: #181818;
     --gray: #E2E3E7; 
     --highlight: #3BBA9C;
+    --gray-inverted: #2A2B30;
   }
   
   .dark {
@@ -20,6 +21,7 @@ body {
     --foreground: white;
     --gray: #2A2B30; 
     --highlight: #3BBA9C;
+    --gray-inverted: #E2E3E7;
   }
 
   body {
@@ -41,4 +43,7 @@ body {
   .text-outline-hover {
     -webkit-text-stroke: 1px #FFD700;
   }
+
+  
+  
 }

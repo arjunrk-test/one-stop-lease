@@ -15,6 +15,8 @@ import {
    TabsList,
    TabsTrigger,
 } from "@/components/ui/tabs"
+import { smartphones } from "@/data/electronics/smartphones";
+import { laptops } from "@/data/electronics/laptops";
 export default function Electronics() {
    return (
       <main className="h-[calc(100vh-112px)] bg-gray text-foreground flex flex-col items-start p-6 px-48">
@@ -38,16 +40,44 @@ export default function Electronics() {
                <TabsTrigger value="smartphones" className="data-[state=active]:bg-foreground data-[state=active]:text-background dark:data-[state=active]:text-background text-black/80">Smartphones</TabsTrigger>
                <TabsTrigger value="laptops" className="data-[state=active]:bg-foreground data-[state=active]:text-background dark:data-[state=active]:text-background text-black/80">Laptops</TabsTrigger>
             </TabsList>
-            <TabsContent value="smartphones">
-               <Card className="bg-background border-none">
-
-               </Card>
+            <TabsContent value="smartphones" className="max-h-[500px] overflow-y-auto scrollbar-hide">
+               <div className="grid grid-cols-3 gap-4 mt-4">
+                  {smartphones.map((phone) => (
+                     <Card key={phone.id} className="bg-background border shadow-sm">
+                        <CardHeader>
+                           <img src={phone.imageUrl} alt={phone.name} className=" bg-white rounded-md w-full h-72 object-cover" />
+                        </CardHeader>
+                        <CardContent>
+                           <CardTitle>{phone.brand}&nbsp;{phone.name}</CardTitle>
+                        </CardContent>
+                        <CardFooter className="flex justify-between items-center">
+                           <span className="font-semibold">{phone.price}</span>
+                           <Button variant="default" className="bg-highlight text-background">Rent Now</Button>
+                        </CardFooter>
+                     </Card>
+                  ))}
+               </div>
             </TabsContent>
-            <TabsContent value="laptops">
-               <Card className="bg-background border-none">
 
-               </Card>
+            <TabsContent value="laptops" className="max-h-[500px] overflow-y-auto scrollbar-hide">
+               <div className="grid grid-cols-3 gap-4 mt-4">
+                  {laptops.map((lap) => (
+                     <Card key={lap.id} className="bg-background border shadow-sm">
+                        <CardHeader>
+                           <img src={lap.imageUrl} alt={lap.name} className="bg-white rounded-md w-full h-72 object-cover" />
+                        </CardHeader>
+                        <CardContent>
+                           <CardTitle>{lap.brand}&nbsp;{lap.name}</CardTitle>
+                        </CardContent>
+                        <CardFooter className="flex justify-between items-center">
+                           <span className="font-semibold">{lap.price}</span>
+                           <Button variant="default" className="bg-highlight text-background">Rent Now</Button>
+                        </CardFooter>
+                     </Card>
+                  ))}
+               </div>
             </TabsContent>
+
          </Tabs>
       </main>
    );

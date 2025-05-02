@@ -31,6 +31,7 @@ module.exports = {
         foreground: "var(--foreground)",
         gray: "var(--gray)",
         highlight: "var(--highlight)",
+        grayInverted: "var(--gray-inverted)"
       },
       keyframes: {
         "accordion-down": {
@@ -48,5 +49,5 @@ module.exports = {
       },
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [tailwindcssAnimate, require("tailwind-scrollbar-hide"),],
 };

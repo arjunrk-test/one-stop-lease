@@ -1,6 +1,6 @@
 // app/products/layout.tsx
-import Navbar from "@/components/Navbar";  // adjust path if needed
-import PagesNav from "@/components/PagesNav";  // adjust path if needed
+import Navbar from "@/components/Navbar";  
+import PagesNav from "@/components/PagesNav"; 
 import React from "react";
 
 export default function ProductsLayout({ children }: { children: React.ReactNode }) {

@@ -7,12 +7,14 @@ type Theme = "light" | "dark";
 interface ThemeContextType {
   theme: Theme;
   toggleTheme: () => void;
+  isLoaded: boolean;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme") as Theme;
@@ -20,22 +22,19 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       setTheme(storedTheme);
       document.documentElement.classList.add(storedTheme);
     }
+    setIsLoaded(true);
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-
-    // Update HTML class
     document.documentElement.classList.remove(theme);
     document.documentElement.classList.add(newTheme);
-
-    // Save to localStorage
     localStorage.setItem("theme", newTheme);
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, isLoaded }}>
       {children}
     </ThemeContext.Provider>
   );
